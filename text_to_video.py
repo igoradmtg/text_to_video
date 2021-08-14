@@ -9,17 +9,16 @@ fnamemp4 = "File.mp4"
 fnamegif = "File.gif"
 text_site = "https://github.com/igoradmtg" # Intro and outro text 
 font_name_intro = "ttf/font3.ttf"
-#font_name = "Y:/html/_python/slideshow04/ttf/CursedTimerUlil-Aznm.ttf"
 font_name = "ttf/font6.ttf"
 duration_intro = 2 # Duration of the text clip 
 
-fontsize_intro = 30 # Font size for intro and outro 
-fontsize_text = 20
+fontsize_intro = 70 # Font size for intro and outro 
+fontsize_text = 40
 Video_type = 5 # Video Resolution  1 - 720х480, 2 - 854x480, 3 - 1280x720, 4 - 1920x1080,  5 - 3840x2160
-W = 720 # Default clip width 1280
-H = 480 # Default clip height 720 
-#W = 1280
-#H = 720
+#W = 720 # Default clip width 1280
+#H = 480 # Default clip height 720 
+W = 1280
+H = 720
     
 DW = 1 # 1 - Up  2 - Down
 DH = 1 # 1 - Left 2 - Right
@@ -81,8 +80,8 @@ def save_clip() :
     #    ar_texts.append("Text "+str(i))
     clips = text_clips(ar_texts)    
     final_clip_f2 = CompositeVideoClip(clips, size=SIZE, bg_color = [255,255,255])         
-    #final_clip_f2.write_videofile(os.path.join(dir_output, fnamemp4), fps=30, threads=4, audio = False)
-    final_clip_f2.write_gif(os.path.join(dir_output, fnamegif), fps=10)
+    final_clip_f2.write_videofile(os.path.join(dir_output, fnamemp4), fps=30, threads=4, audio = False)
+    #final_clip_f2.write_gif(os.path.join(dir_output, fnamegif), fps=10)
 
 def main() : 
     global dir_name, fnamemp4, dir_output, Video_type
